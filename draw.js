@@ -1,9 +1,13 @@
+const colors = ['red', 'blue', 'green', 'yellow', 'white', 'purple', 'orange'];
+const maxOptions = colors.length;
+var optionCount = 0;
+var originalOptions = [];
 
-    const maxOptions = 4;
-    const colors = ['red', 'blue', 'green', 'yellow']
-    var optionCount = 0;    
-    var originalOptions = [];
-
+function clearVariables(){
+    optionCount = 0;
+    originalOptions = [];
+}
+    
 function addOption(){
     var option = document.getElementById("input_option");
     const parent = document.getElementById("options");
@@ -58,8 +62,6 @@ function shuffleOriginalOptions(){
         }while(spotsTaken[newSpot]!=0)
         spotsTaken[newSpot] = 1;
         originalOptions[newSpot] = tmpOptions[i];
-        console.log(originalOptions);
-        console.log("neswspot="+newSpot);
     }
 }
 
@@ -68,6 +70,17 @@ function clearOptions(){
     while(parent.firstChild){
         parent.removeChild(parent.lastChild);
     }
+}
+
+function clearAll(){
+    clearVariables();
+    clearOptions();
+    const answear = document.getElementById("answear");
+    if (answear.firstChild)
+        answear.removeChild(answear.lastChild);
+    const opts = document.getElementById("options");
+    while (opts.firstChild)
+        opts.removeChild(opts.lastChild);
 }
 
 function choose(event){

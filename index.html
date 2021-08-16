@@ -3,6 +3,7 @@
     <head>
         <title>easy-draw</title>
         <link rel="stylesheet" href="style.css">
+        <script src="draw.js"></script>
     </head>
     <body>
         <div id="header"></div>
@@ -13,13 +14,14 @@
             <h2 id="undertitle2">choose a color and you'll get your answear</h2>
         </div>
         <div id="main_buttons">
-            <input type="text"/>
-            <button id="add">add an option</button>
-            <div id="options">
-
-            </div>
-            <button id="generate">generate options</button>
+            <input type="text" id="input_option"/>
+            <button id="add" onclick="addOption()">add an option</button>
+            <div id="options"></div>
+            <button id="generate" onclick="generateOptions()">generate options</button>
+            <button id="test" onclick="test()">test</button>
+            <button id="clear" onclick="clearAll()">clear</button>
             <div id="colors"></div>
+            <div id="answear"></div>
         </div>
         <div id="footer"></div>
     </body>
