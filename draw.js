@@ -46,6 +46,9 @@ function generateOptions(){
         node.addEventListener("click", choose);
     }
     shuffleOriginalOptions();
+
+    document.getElementById("undertitle").style.display = "none";
+    document.getElementById("undertitle2").style.display = "block";
 }
 
 
@@ -81,6 +84,8 @@ function clearAll(){
     const opts = document.getElementById("options");
     while (opts.firstChild)
         opts.removeChild(opts.lastChild);
+    document.getElementById("undertitle").style.display = "block";
+    document.getElementById("undertitle2").style.display = "none";
 }
 
 function choose(event){
@@ -93,17 +98,4 @@ function choose(event){
     var node = document.createElement("p")
     node.innerHTML = "you chose " + originalOptions[id];
     parent.appendChild(node);
-}
-
-function test(){
-    var option = ["aaa", "bbbb", "cccccc", "dddd"]
-    const parent = document.getElementById("options");
-    for (i=0;i<4;i++){
-        var node = document.createElement("p");
-        node.innerHTML = option[i];
-        originalOptions[optionCount] = option[i];
-        optionCount++;
-        parent.appendChild(node);
-    }
-        generateOptions();
 }

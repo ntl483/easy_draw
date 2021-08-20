@@ -11,17 +11,16 @@
         <div id="title">
             <h3 id="title">EASY DRAW</h3>
             <h2 id="undertitle">just add options and click generate options</h2>
-            <h2 id="undertitle2">choose a color and you'll get your answear</h2>
+            <h2 id="undertitle2" style="display: none">choose a color and you'll get your answear</h2>
         </div>
         <div id="main_buttons">
-            <input type="text" id="input_option"/>
+            <input type="text" id="input_option" class="span_3"/>
             <button id="add" onclick="addOption()">add an option</button>
-            <div id="options"></div>
             <button id="generate" onclick="generateOptions()">generate options</button>
-            <button id="test" onclick="test()">test</button>
             <button id="clear" onclick="clearAll()">clear</button>
-            <div id="colors"></div>
-            <div id="answear"></div>
+            <div id="options" class="span_3"></div>
+            <div id="colors" class="span_3"></div>
+            <div id="answear" class="span_3"></div>
         </div>
         <div id="footer"></div>
     </body>
