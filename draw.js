@@ -17,7 +17,8 @@ function addOption(){
         originalOptions[optionCount] = new String(option.value);
         optionCount++;
         parent.appendChild(node);
-        option.value = "";    
+        option.value = "";
+        document.getElementById("generate").style.display="block";
     }
     if (optionCount>=maxOptions)
         document.getElementById("add").style.display = "none";
