@@ -1,45 +1,119 @@
-body{
-    width: auto;
-    margin: 0 0 0 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
+/* Background pattern from Toptal Subtle Patterns */
+
+    @font-face {
+        font-family: "Raleway";
+        src: url(fonts/Raleway/Raleway-VariableFont_wght.ttf);
+    }
+
+    body{
+        font-family: 'Raleway', 'Raleway', Calibri, 'Raleway', sans-serif;
+        width: auto;
+        margin: 0 0 0 0;   
+        justify-content: center;
+        display: flex;
+        background-image: url(img/background/mosaic/mosaic/mosaic.png);
+    }
+
+    #main_container{
+        text-align: center;
+        margin: 0 0 0 0;
+        background-color: rgb(197, 197, 197);
+        height: 100vh;
+        width: 70vw;
+        display: inline-block;
+    }
+
+    button{
+        width: fit-content;
+        height: fit-content;
+        align-self: center;
+        justify-self: flex-end;
+
+        background-color: #383636;
+        border: none;
+        color: rgb(255, 255, 255);
+        padding: 1vw;
+        text-align: center;
+        text-decoration: wavy;
+        display: inline-block;
+        font-size: 1.5vw;
+        margin: 1vw 1vw;
+        border-radius: 20%;
+    }
+
+@media only screen and (max-width: 768px){
+    #h_title{
+        font-size: 4vw;
+    }
+    
+    #undertitle{
+        font-size: 3vw;
+    }
+    
+    #undertitle2{
+        font-size: 3vw;
+    }
+    
+    #main_buttons{
+        align-content: center;
+        justify-content: center;
+        display:grid;
+        gap: 2vw;
+        grid-template-columns: auto auto auto;
+    }
+    
+    .span_3{
+        grid-column: 1 / span 3;
+    }
+    
+    #options p{
+        margin: 2vh 0 0 0;
+    }
+    
+    #colors button{
+        margin: 0 4vw 0 0;
+    }
+    
 }
 
-#title{
-    font-size: 4vw;
-}
 
-#undertitle{
-    font-size: 2vw;
-}
+@media only screen and (min-width: 768px){
 
-#undertitle2{
-    font-size: 2vw;
-}
+    #h_title{
+        font-size: 3vw;
+    }
 
-#main_buttons{
-    align-content: center;
-    justify-content: center;
-    display:grid;
-    gap: 1.5vw;
-    grid-template-columns: auto auto auto;
-}
+    #undertitle{
+        font-size: 1.5vw;
+    }
 
-button{
-    width: fit-content;
-    height: fit-content;
-    align-self: center;
-    justify-self: flex-end;
-}
+    #undertitle2{
+        font-size: 1.5vw;
+    }
 
-.span_3{
-    grid-column: 1 / span 3;
-}
+    #main_buttons{
+        align-content: center;
+        justify-content: center;
+        display:grid;
+        gap: 3vw;
+        grid-template-columns: auto auto auto;
+    }
 
-#options p{
-    margin: 1vh 0 0 0;
-}
+    button{
+        padding: 0.6vw;
+        font-size: 1.4vw;
+        border-radius: 15%;
+    }
 
-#colors button{
-    margin: 0 2vw 0 0;
+    .span_3{
+        grid-column: 1 / span 3;
+    }
+
+    #options p{
+        margin: 1vh 0 0 0;
+    }
+
+    #colors button{
+        margin: 0 2vw 0 0;
+    }
 }
