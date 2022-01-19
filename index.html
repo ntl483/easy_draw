@@ -4,23 +4,24 @@
         <title>easy-draw</title>
         <link rel="stylesheet" href="style.css">
         <script src="draw.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div id="header"></div>
-
-        <div id="title">
-            <h3 id="title">EASY DRAW</h3>
-            <h2 id="undertitle">just add options and click generate options</h2>
-            <h2 id="undertitle2" style="display: none">choose a color and you'll get your answear</h2>
-        </div>
-        <div id="main_buttons">
-            <input type="text" id="input_option" class="span_3"/>
-            <button id="add" onclick="addOption()">add an option</button>
-            <button id="generate" onclick="generateOptions()" style="display: none">generate options</button>
-            <button id="clear" onclick="clearAll()">clear</button>
-            <div id="options" class="span_3"></div>
-            <div id="colors" class="span_3"></div>
-            <div id="answear" class="span_3"></div>
+        <div id="main_container">
+            <div id="div_titles">
+                <h3 id="h_title">EASY DRAW</h3>
+                <h2 id="undertitle">just add options and click generate options</h2>
+                <h2 id="undertitle2" style="display: none">choose a color and you'll get your answear</h2>
+            </div>
+            <div id="main_buttons">
+                <input type="text" id="input_option" class="span_3"/>
+                <button id="add" onclick="addOption()">add an option</button>
+                <button id="generate" onclick="generateOptions()" style="display: none">generate options</button>
+                <button id="clear" onclick="clearAll()">clear</button>
+                <div id="options" class="span_3"></div>
+                <div id="colors" class="span_3"></div>
+                <div id="answear" class="span_3"></div>
+            </div>
         </div>
         <div id="footer"></div>
     </body>
